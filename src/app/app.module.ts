@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HtmlFormComponent } from './html-form/html-form.component';
 import { JsFormComponent } from './js-form/js-form.component';
+import { AngularFormComponent } from './angular-form/angular-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { JsFormComponent } from './js-form/js-form.component';
     BrowserModule,
     AppRoutingModule,
     HtmlFormComponent,
-    JsFormComponent
+    JsFormComponent,
+    AngularFormComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

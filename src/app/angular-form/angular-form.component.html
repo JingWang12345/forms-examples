@@ -1,0 +1,30 @@
+<h2>Angular form</h2>
+
+<form #myForm="ngForm" ngForm (ngSubmit)="submit()">
+<!-- ngSubmit questa è una direttiva del modulo FormsModule -->
+<!-- #myForm è una variabile in HTML -->
+<!-- voglio che dentro questa variabile ci sia il contenuto della direttiva ngForm -->
+  <div>
+  <label for="email">Email: </label>
+  <input id="email" type="email"  name="email" required [(ngModel)]="data.email">
+</div>
+
+<div>
+  <label for="password">Password: </label>
+  <input #pass="ngModel" id="password" type="password" name="password" required minlength="4" [(ngModel)]="data.password" [placeholder]="pass.invalid ? 'Campo non valido' : ''">
+<span *ngIf="pass.errors?.['required']">E' necessario inserire una password</span>
+<span *ngIf="pass.errors?.['minlength']">Questa password non è abbastanza lunga</span>
+</div>
+
+<div>
+  <label for="newsletter">Iscriviti alla newsletter: </label>
+  <input id="newsletter" type="checkbox" name="newsletter" value="chiappe" [(ngModel)]="data.newsletter">
+  <!-- questo, se flaggato, mi passa una stringa newsletter: "on", a meno che io non ne modifichi il value, come sopra in "chiappe" -->
+</div>
+
+<div>
+
+  <input type="submit" [disabled]="myForm.form.invalid">
+  <span *ngIf="myForm.form.invalid">Questo form è stato completato in modo invalido quindi viene visualizzato</span>
+</div>
+</form>

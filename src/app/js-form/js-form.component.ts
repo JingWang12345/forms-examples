@@ -19,6 +19,7 @@ export class JsFormComponent {
   //qua sarebbe meglio fare un interfaccia
 
   ngAfterViewInit() {
+
     let form = document.getElementById(this.id) as HTMLFormElement;
 
     (form.elements.namedItem("email") as any).value = this.data.email;
@@ -33,10 +34,10 @@ export class JsFormComponent {
 
     let form = document.getElementById("registration") as HTMLFormElement;
 
-    let email = (form.elements.namedItem("email") as any).value;
-    let password = (form.elements.namedItem("password") as any).value;
+    // let email = (form.elements.namedItem("email") as any).value;
+    // let password = (form.elements.namedItem("password") as any).value;
     // let newsletter = (form.elements.namedItem("newsletter") as any).value; questo avrebbe value "chiappe" è meglio usare il checked
-    let newsletter = (form.elements.namedItem("newsletter") as any).checked;
+    // let newsletter = (form.elements.namedItem("newsletter") as any).checked;
 
     let formData = {
       email: (form.elements.namedItem("email") as any).value,
