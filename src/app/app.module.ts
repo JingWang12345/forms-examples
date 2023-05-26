@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HtmlFormComponent } from './html-form/html-form.component';
 import { JsFormComponent } from './js-form/js-form.component';
 import { AngularFormComponent } from './angular-form/angular-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AngularFormComponent } from './angular-form/angular-form.component';
     AppRoutingModule,
     HtmlFormComponent,
     JsFormComponent,
-    AngularFormComponent
+    AngularFormComponent,
+    ReactiveFormComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
